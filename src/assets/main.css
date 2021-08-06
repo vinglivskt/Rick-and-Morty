@@ -1,0 +1,17 @@
+
+.characters-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.character-block{
+    display: flex;
+    justify-content: space-around;
+    width: 22%;
+    margin: 10px;
+
+
+
+      }
+
