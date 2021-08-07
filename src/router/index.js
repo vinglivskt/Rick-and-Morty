@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import RickAndMortyList from '../views/RickAndMortyList.vue'
-
+import RickAndMortyCharacter from '../views/RickAndMortyCharacter.vue';
 Vue.use(VueRouter)
 
 const routes = [
@@ -10,6 +10,11 @@ const routes = [
     name: 'RickAndMortyList',
     component: RickAndMortyList
   },
+  {
+    path: '/character/:id',
+    name: 'CharacterDetails',
+    component: RickAndMortyCharacter,
+  }
 
 
 ]

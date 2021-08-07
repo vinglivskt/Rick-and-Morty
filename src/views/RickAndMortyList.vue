@@ -34,9 +34,7 @@ export default {
   components: {
     CharacterBlock,
     paginate},
- created() {
-    this.$store.dispatch('fetchCharacters',this.currentPage);
- },
+
   data(){
     return{
       currentPage: 1,
@@ -51,8 +49,17 @@ export default {
     },
     pages(){
       return this.$store.state.pages;
-    }
     },
+    },
+   watch: {
+    currentPage:{
+      handler(page){
+        this.$store.dispatch('fetchCharacters',page);
+      },
+      immediate: true
+
+    },
+  },
   methods:{
     clickCallback(pageNum){
       console.log({pageNum})
